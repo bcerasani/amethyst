@@ -8,6 +8,7 @@
     "connect": "~2.14.3",
     "gulp": "~3.6.0",
     "gulp-changed": "~0.3.0",
+    "gulp-csso": "^0.2.8",
     "gulp-imagemin": "~0.1.5",
     "gulp-livereload": "~1.2.0",
     "gulp-notify": "~1.2.4",

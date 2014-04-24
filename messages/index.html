@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<title>Farewell Leanne</title>
+
+		<script type="text/javascript" src="//use.typekit.net/zts2eaj.js"></script>
+		<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+		<link rel="stylesheet" href="../build/stylesheets/main.css" />
+	</head>
+
+	<body>
+		<section>
+			<div class="container">
+				<img src="../build/images/masthead.png" alt="Farewell Leanne" class="masthead">
+				<h1>Messages</h1>
+				<div class="inner">
+
+				</div>
+			</div>
+		</section>
+
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+		<script>
+			(function() {
+			  var url = "http://getsimpleform.com/messages.json?api_token=550fca3889589954b41c8030655b8564?callback=?";
+
+			  // $.ajax(url, {
+			  //   complete: function(data) {
+			  //     console.log(data);
+			  //   },
+			  //   dataType: 'jsonp'
+			  // })
+
+			  $.ajax({
+			       type : "GET",
+			       dataType : "jsonp",
+			       url : url, // ?callback=?
+			       success: function(data){
+			             // do stuff with data
+			             console.log(data);
+			       }
+			  });
+			})();
+		</script>
+	</body>
+</html>
