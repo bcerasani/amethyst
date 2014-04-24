@@ -14,10 +14,6 @@ body {
   max-width: 850px;
   margin: 0 auto;
   padding: 0 0.5rem;
-  img {
-    display: block;
-    margin: 2rem auto;
-  }
   h1 {
     text-align: center;
   }
@@ -27,12 +23,24 @@ body {
   }
 }
 
+img.masthead {
+  display: block;
+  margin: 2rem auto;
+}
+
+.logo {
+  width: 1rem;
+  float: left;
+  margin: 0 0.5rem 0 0;
+}
+
 .inner {
   margin: 0 auto;
   max-width: 500px;
 }
 
 form {
+  margin-top: 2rem;
   input,
   textarea {
     font: $fw-default $fs-default $ff-default;

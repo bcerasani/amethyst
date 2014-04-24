@@ -60,8 +60,9 @@ a {
   color: $cl-white;
   transition: 0.2s;
   font-weight: $fw-medium;
+  color: $cl-primary;
   &:hover {
-    color: $cl-primary;
+    color: lighten($cl-primary, 10%);
   }
 }
 
@@ -69,7 +70,8 @@ a {
 // ---------------------------------------------
 
 b, strong, mark {
-  font-weight: bold;
+  font-weight: $fw-medium;
+  color: $cl-white;
 }
 
 del {
