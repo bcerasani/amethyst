@@ -2,3 +2,92 @@
 //  Module
 //  ============================================
 
+* {
+  box-sizing: border-box;
+}
+
+body {
+  border-top: 0.2rem solid $cl-primary;
+}
+
+.container {
+  max-width: 850px;
+  margin: 0 auto;
+  padding: 0 0.5rem;
+  img {
+    display: block;
+    margin: 2rem auto;
+  }
+  h1 {
+    text-align: center;
+  }
+  p {
+    color: $cl-light-gray;
+    margin: 0 auto 1rem;
+  }
+}
+
+.inner {
+  margin: 0 auto;
+  max-width: 500px;
+}
+
+form {
+  input,
+  textarea {
+    font: $fw-default $fs-default $ff-default;
+    display: block;
+    width: 100%;
+    padding: 0.5rem 0.5rem;
+    border-radius: 3px;
+    margin: 0 0 1rem 0;
+    &:focus {
+      box-shadow: inset 0 0 0 2px $cl-primary;
+      // border: 2px solid $cl-primary;
+    }
+  }
+  input {
+    background: $cl-white;
+  }
+  textarea {
+    resize: none;
+    height: 6rem;
+    background: $cl-white;
+  }
+}
+
+.button {
+  display: block;
+  font: $fw-semibold $fs-default $ff-default;
+  // text-transform: uppercase;
+  color: $cl-dark-gray;
+  padding: 0.5rem 4rem;
+  width: auto;
+  background: $cl-primary;
+  cursor: pointer;
+  transition: 0.2s;
+  &:hover {
+    background: adjust-color($cl-primary, $lightness: 10%, $saturation: 0%);
+  }
+}
+
+footer {
+  background: url('../images/footer.jpg') no-repeat;
+  background-size: cover;
+  width: 100%;
+  &:before {
+    display: block;
+    content: "";
+    padding-top: 56.25%;
+  }
+}
+
+#counter {
+  font: $fw-semibold $fs-small $ff-default;
+  padding: 0.5rem;
+  float: right;
+}
+
+.warning {
+  color: #ff2a00;
+}
