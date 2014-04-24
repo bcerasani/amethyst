@@ -1,3 +1,13 @@
 //  ============================================
 //  State
 //  ============================================
+
+#counter {
+  float: right;
+  padding: 0.5rem;
+  font: $fw-semibold $fs-small $ff-default;
+}
+
+.warning {
+  color: #ff2a00;
+}

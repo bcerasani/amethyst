@@ -2,5 +2,17 @@
 //  Layout
 //  ============================================
 
-//  Header
-// ---------------------------------------------
+section {
+  margin-bottom: 3rem;
+}
+
+.container {
+  margin: 0 auto;
+  padding: 0 0.5rem;
+  max-width: 800px;
+}
+
+.inner {
+  margin: 0 auto;
+  max-width: 500px;
+}
