@@ -1,0 +1,131 @@
+//  ============================================
+//  Base
+//  =============================================
+
+html {
+  min-height: 100%;
+  font-size: 18px;
+}
+
+body {
+  background: $cl-dark-gray;
+  color: $cl-white;
+  font: $fw-default $fs-default $ff-default;
+  line-height: 1.5;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-size-adjust: 100%;
+}
+
+//  Headers
+// ---------------------------------------------
+
+h1,h2, h3, h4, h5, h6 {
+  margin: 0 0 1rem 0;
+  font-style: normal;
+}
+
+h1, h2, h3 {
+  font-weight: $fw-light;
+}
+
+h4, h5, h6 {
+  font-weight: $fw-default;
+}
+
+hr {
+  border: 0;
+  height: 0;
+  border-top: 1px solid $cl-gray;
+}
+
+h1 {
+  font: $fw-medium $fs-large $ff-default;
+}
+
+//  Links
+// ---------------------------------------------
+
+a {
+  outline: none;
+  color: inherit;
+  text-decoration: none;
+  word-wrap: break-word;
+  color: $cl-primary;
+  &:hover {
+    color: $cl-primary;
+  }
+}
+
+//  Text Elements
+// ---------------------------------------------
+
+b, strong, mark {
+  font-weight: bold;
+}
+
+del {
+  text-decoration: line-through;
+}
+
+sub, sup {
+  position: relative;
+  vertical-align: baseline;
+  font-size: 75%;
+  line-height: 0;
+}
+
+sup {
+  top: -.5em;
+}
+
+sub {
+  bottom: -.25em;
+}
+
+//  Embedded Elements
+// ---------------------------------------------
+
+img, embed, object, video {
+  max-width: 100%;
+}
+
+// IE9 Hack
+svg:not(:root) {
+  overflow: hidden;
+}
+
+//  Block-level Elements
+// ---------------------------------------------
+
+p {
+  margin: 0 0 1rem 0;
+  line-height: 1.45;
+}
+
+blockquote, figcaption {
+  font-family: $ff-sans;
+}
+
+.caption, [role="contentinfo"] {
+  font-family: $ff-sans;
+}
+
+q {
+  quotes: none;
+}
+
+q:before, q:after {
+  content: "";
+}
+
+q, cite, blockquote {
+  font-style: italic;
+}
+
+//  Forms
+// ---------------------------------------------
+
+textarea {
+  resize: vertical;
+}
