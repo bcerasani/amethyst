@@ -8,6 +8,7 @@
 		<script type="text/javascript" src="//use.typekit.net/zts2eaj.js"></script>
 		<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
 		<link rel="stylesheet" href="stylesheets/main.css" />
+		<meta name="robots" content="noindex, nofollow">
 	</head>
 
 	<body>
@@ -36,6 +37,7 @@
 
 		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 		<script>
+		(function() {
 			var $message = $('#message'),
 				$counter = $('#counter'),
 				maxlength = $message.attr('maxlength');
@@ -54,6 +56,7 @@
 
         $counter.html(remaining);
 	    });
+	  })();
 		</script>
 	</body>
 </html>

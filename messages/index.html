@@ -8,6 +8,7 @@
 		<script type="text/javascript" src="//use.typekit.net/zts2eaj.js"></script>
 		<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
 		<link rel="stylesheet" href="../stylesheets/main.css" />
+		<meta name="robots" content="noindex, nofollow">
 	</head>
 
 	<body>
@@ -23,26 +24,14 @@
 
 		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 		<script>
-			(function() {
-			  var url = "http://getsimpleform.com/messages.json?api_token=550fca3889589954b41c8030655b8564?callback=?";
+		(function() {
+			var url = "http://getsimpleform.com/messages.json?api_token=550fca3889589954b41c8030655b8564";
 
-			  // $.ajax(url, {
-			  //   complete: function(data) {
-			  //     console.log(data);
-			  //   },
-			  //   dataType: 'jsonp'
-			  // })
+			$.getJSON(url, function(data) {
+				console.log(data);
+			});
 
-			  $.ajax({
-			       type : "GET",
-			       dataType : "jsonp",
-			       url : url, // ?callback=?
-			       success: function(data){
-			             // do stuff with data
-			             console.log(data);
-			       }
-			  });
-			})();
+		})();
 		</script>
 	</body>
 </html>
