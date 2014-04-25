@@ -4,7 +4,7 @@
 		<meta charset="utf-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<title>Farewell Leanne | Thanks</title>
+		<title>Farewell Leanne | Messages</title>
 
 		<script type="text/javascript" src="//use.typekit.net/zts2eaj.js"></script>
 		<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
@@ -27,13 +27,39 @@
 		<section>
 			<div class="container">
 				<img src="../images/masthead.png" alt="Farewell Leanne" class="center">
-				<h1>Thank-you!</h1>
+				<h1>Messages</h1>
 				<div class="inner">
-					<img src="../images/thank-you.gif" alt="" class="center">
-					<p>Be sure to RSVP for the <a href="http://www.meetup.com/secrethandshake/events/148616812/" target="_blank">May 22nd Secret Handshake</a>.</p>
+
+				<script id="message" type="text/x-handlebars-template">
+				  {{#each array}}
+						<div class="message">
+					    <h2>{{this.data.name}}</h2>
+					    <p>{{this.data.message}}</p>
+					  </div>
+				  {{/each}}
+				</script>
+
+					<div id="message_list"></div>
 				</div>
 			</div>
 		</section>
 
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+		<script src="../javascripts/handlebars-v1.3.0.js"></script>
+
+		<script>
+		(function() {
+			var url = "http://getsimpleform.com/messages.js?api_token=550fca3889589954b41c8030655b8564"
+
+			$.get(url, function(response){
+				var source   = $("#message").html();
+			  var template = Handlebars.compile(source);
+				var data = {
+					array: response
+				};
+		  	$("#message_list").html(template(data));
+			}, 'jsonp');
+	  })();
+		</script>
 	</body>
 </html>
