@@ -55,6 +55,17 @@ h1 {
   font: $fw-medium $fs-large $ff-default;
 }
 
+h2 {
+  display: inline-block;
+  font: $fw-medium $fs-medium $ff-default;
+  background-image: linear-gradient(0deg,
+    transparent 8%,
+    $cl-primary 8%,
+    $cl-primary 10%,
+    transparent 10%
+  );
+}
+
 //  Links
 // ---------------------------------------------
 
