@@ -33,6 +33,7 @@
 				<script id="message" type="text/x-handlebars-template">
 				  {{#each array}}
 						<div class="message">
+							<span class="count">{{inc @index}}</span>
 					    <h2>{{this.data.name}}</h2>
 					    <p>{{this.data.message}}</p>
 					  </div>
@@ -52,6 +53,9 @@
 			var url = "http://getsimpleform.com/messages.js?api_token=550fca3889589954b41c8030655b8564"
 
 			$.get(url, function(response){
+				Handlebars.registerHelper("inc", function(value, options) {
+			    return parseInt(value) + 1;
+				});
 				var source   = $("#message").html();
 			  var template = Handlebars.compile(source);
 				var data = {

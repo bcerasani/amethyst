@@ -41,6 +41,19 @@ form {
   margin: 2rem 0 2rem 0;
 }
 
+.count {
+  position: absolute;
+  margin: 0 0 0 -3rem;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 1rem;
+  background: $cl-primary;
+  color: $cl-dark-gray;
+  text-align: center;
+  font: $fw-semibold $fs-default $ff-default;
+  line-height: 2rem;
+}
+
 .button {
   display: block;
   padding: 0.5rem 4rem;
